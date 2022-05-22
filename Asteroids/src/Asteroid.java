@@ -76,7 +76,10 @@ public class Asteroid extends Floater {
         xSpeed = newAsteroid.xSpeed + Math.random() - 0.5 + 0.1 * obj.getXSpeed();
         ySpeed = newAsteroid.ySpeed + Math.random() - 0.5 + 0.1 * obj.getYSpeed();
         super.accelerate(0.01);
-        rotationSpeed = 1.5;
+        rotationSpeed = Math.random() + 0.5;
+        if (Math.random() < 0.5) {
+            rotationSpeed *= -1;
+        }
         if (size == 2) {
             pointValue = 50;
         }
